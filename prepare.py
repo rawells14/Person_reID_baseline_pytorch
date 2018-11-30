@@ -1,8 +1,11 @@
 import os
 from shutil import copyfile
 
+
+
+
 # You only need to change this line to your dataset download path
-download_path = '/home/zzheng/Downloads/Market'
+download_path = '/datasets/Market-1501-Segmented-Baseline'
 
 if not os.path.isdir(download_path):
     print('please change the download_path')
@@ -85,6 +88,7 @@ for root, dirs, files in os.walk(train_path, topdown=True):
 
 #---------------------------------------
 #train_val
+
 train_path = download_path + '/bounding_box_train'
 train_save_path = download_path + '/pytorch/train'
 val_save_path = download_path + '/pytorch/val'

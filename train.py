@@ -224,7 +224,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             # deep copy the model
             if phase == 'val':
                 last_model_wts = model.state_dict()
-                if epoch%10 == 9:
+                if epoch%4 == 0:
                     save_network(model, epoch)
                 draw_curve(epoch)
 
